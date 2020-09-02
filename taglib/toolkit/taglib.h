@@ -27,6 +27,7 @@
 #define TAGLIB_H
 
 #include "taglib_config.h"
+#include "taglib_export.h"
 
 #define TAGLIB_MAJOR_VERSION 1
 #define TAGLIB_MINOR_VERSION 11
@@ -84,6 +85,22 @@ namespace TagLib {
    * so I'm providing something here that should be constant.
    */
   typedef std::basic_string<wchar_t> wstring;
+
+  /*!
+   * Checks if the version of TagLib you are using is at least the specified version.
+   *
+   * This is a runtime check, taking into account that your program may have been linked
+   * to a more recent version of TagLib than it was compiled with.
+   */
+  TAGLIB_EXPORT bool isTagLibVersionAtLeast(int major, int minor);
+
+  /*!
+   * Checks if the version of TagLib you are using is at least the specified version.
+   *
+   * This is a runtime check, taking into account that your program may have been linked
+   * to a more recent version of TagLib than it was compiled with.
+   */
+  TAGLIB_EXPORT bool isTagLibVersionAtLeast(int major, int minor, int patch);
 }
 
 /*!

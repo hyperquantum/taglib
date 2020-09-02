@@ -297,6 +297,7 @@ set(xm_SRCS
 )
 
 set(toolkit_SRCS
+  toolkit/taglib.cpp
   toolkit/tstring.cpp
   toolkit/tstringlist.cpp
   toolkit/tbytevector.cpp
